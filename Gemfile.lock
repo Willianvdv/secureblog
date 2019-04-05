@@ -1,3 +1,12 @@
+GIT
+  remote: https://github.com/mvgijssel/to_arel.git
+  revision: c3b393a3dbd397f2ec4dea08ad00299091ba1d9b
+  specs:
+    to_arel (0.1.0)
+      arel (~> 9.0.0)
+      arel_extensions
+      pg_query (~> 1.1.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -47,6 +56,8 @@ GEM
     archive-zip (0.12.0)
       io-like (~> 0.3.0)
     arel (9.0.0)
+    arel_extensions (1.1.9)
+      arel (>= 6.0)
     bindex (0.6.0)
     bootsnap (1.4.2)
       msgpack (~> 1.0)
@@ -106,6 +117,8 @@ GEM
     nio4r (2.3.1)
     nokogiri (1.10.2)
       mini_portile2 (~> 2.4.0)
+    pg (1.1.4)
+    pg_query (1.1.0)
     public_suffix (3.0.3)
     puma (3.12.1)
     rack (2.0.7)
@@ -168,7 +181,6 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
-    sqlite3 (1.4.0)
     thor (0.20.3)
     thread_safe (0.3.6)
     tilt (2.0.9)
@@ -201,13 +213,14 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   jbuilder (~> 2.5)
   listen (>= 3.0.5, < 3.2)
+  pg
   puma (~> 3.11)
   rails (~> 5.2.3)
   sass-rails (~> 5.0)
   selenium-webdriver
   spring
   spring-watcher-listen (~> 2.0.0)
-  sqlite3
+  to_arel!
   turbolinks (~> 5)
   tzinfo-data
   uglifier (>= 1.3.0)

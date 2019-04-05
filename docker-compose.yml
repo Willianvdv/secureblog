@@ -1,0 +1,24 @@
+version: '3'
+services:
+  postgres:
+    image: postgres
+    volumes:
+      - postgres:/var/lib/postgres/data
+  app:
+    build: .
+    environment:
+      - DATABASE_HOST=postgres
+      - DATABASE_USERNAME=postgres
+    volumes:
+      - .:/app
+    # entrypoint:
+    #   - rails
+    #   - db:setup
+    ports:
+      - "3000:3000"
+    command: ["rails", "server", "-b", "0.0.0.0"]
+    depends_on:
+      - postgres
+
+volumes:
+  postgres:
