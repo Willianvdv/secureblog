@@ -3,7 +3,6 @@ FROM ruby:2.6
 RUN apt-get update ; apt-get install -y nodejs postgresql-client
 
 COPY Gemfile Gemfile.lock .ruby-version ./
-COPY vendor/to_arel ./vendor/to_arel
 
 RUN bundle install -j $(nproc)
 
